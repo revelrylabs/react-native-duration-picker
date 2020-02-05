@@ -1,0 +1,36 @@
+{
+  "name": "react-native-duration-picker",
+  "version": "1.0.0",
+  "description": "A duration picker component for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revelrylabs/react-native-duration-picker.git"
+  },
+  "author": "Revelry Labs",
+  "keywords": [
+    "react",
+    "react native",
+    "duration",
+    "time",
+    "picker",
+    "component",
+    "ui",
+    "mobile",
+    "ios",
+    "android"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revelrylabs/react-native-duration-picker/issues"
+  },
+  "homepage": "https://github.com/revelrylabs/react-native-duration-picker#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-native": "^0.61.5"
+  }
+}
