@@ -1,10 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {View} from 'react-native'
 
 import PickerStack from './src/PickerStack'
 import styles from './src/styles'
 
-export default class DurationPicker extends React.component {
+class DurationPicker extends React.component {
+  static propTypes = {
+    showSeconds: PropTypes.bool,
+    showMinutes: PropTypes.bool,
+    showHours: PropTypes.bool,
+    containerStyles: PropTypes.object,
+    pickerStyles: PropTypes.object,
+    onValueChange: PropTypes.func
+  }
+
   state = {
     seconds: 0,
     minutes: 0,
@@ -14,7 +24,7 @@ export default class DurationPicker extends React.component {
   handleValueChange = (field, val) => {
     this.setState({[field]: val})
 
-    this.props.onValueChange(this.state)
+    this.props.onValueChange && this.props.onValueChange(this.state)
   }
 
   makeNumberRange(max) {
@@ -34,7 +44,7 @@ export default class DurationPicker extends React.component {
   }
 
   render() {
-    const {showSeconds, showMinutes, showHours, pickerStyles, containerStyles} = this.props
+    const {showSeconds = true, showMinutes = true, showHours = true, pickerStyles, containerStyles} = this.props
     const {seconds, minutes, hours} = this.state
 
     return (
@@ -67,3 +77,5 @@ export default class DurationPicker extends React.component {
     )
   }
 }
+
+module.exports = DurationPicker
